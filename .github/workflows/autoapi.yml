@@ -16,7 +16,7 @@ on:
    
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id  # 自己点的 start
     steps:
     - name: Checkout
@@ -24,7 +24,7 @@ jobs:
     - name: Set up Python #安装python
       uses: actions/setup-python@v1
       with:
-        python-version: 3.8
+        python-version: 3.9
     - name: Install requests #安装requests
       run: |
         pip install requests
